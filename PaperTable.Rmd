@@ -1,0 +1,56 @@
+---
+title: "Citations for predator model"
+output:
+  pdf_document:
+    includes:
+      in_header: header.tex
+  word_document: default
+---
+
+
+\blandscape
+```{r, results="asis", echo=FALSE, tab.cap="This is the head of the Iris table"}
+library(xtable)
+
+maxAge = c("Max age", "Names.r", "Howard et al. (2010)", "Winship et al. (2001)", "Bob de Long", "25+")
+
+skip = c("","","","","","")
+wtAge1= c("Weight at age","WeightAtAge.r","	Pitcher and Calkins (1979)","	Winship et al. (2001)","	Winship et al. (2006)","	Noren et al.  (2011)")
+wtAge2 = c("","","Boulva and McLaren (1979)","","","")
+
+matAtAge = c("Maturity at age", "MaturityAtAge.r", "	Pitcher and Calkins (1979)", "Winship et al. (2002)", "Winship et al. (2002)", "NA")
+
+sexAtAge1 = c("Sex and age ratios", "SexAgeRatio.r", "	Zier and Gaydos (2014)", "Winship et al. (2002)", "Winship et al. (2002)", "NA")
+
+sexAtAge2 = c("","","Bigg (1969)","","Bob deLong (pers. comm.)","")
+
+
+inlandPresence1 = c("Predator presence", "InlandPredatorPresence.r", "NA", "Jefferies et al. (2012)", "Jefferies et al. (2012)", "Hauser et al. (2007)")
+inlandPresence2 = c("","","","NAVFAC report","NAVFAC report","")
+
+predatorAbundance1 = c("Predator abundance", "PredatorAbundance.r", "Jefferies/Ward", "Jefferies/Ward", "Ward", "Ford/Ward")
+
+
+preySelectivity1 = c("Prey selectivity", "PreyInDiet.r", "Thomas et al. (2016)", "Thomas et al. (2016)", "Thomas et al. (2016)", "Ford et al. (1998)")
+preySelectivity2 = c("", "", "", "Scordino et al. (2013)", "Scordino et al. (2013)", "")
+
+energeticDemands1 = c("Enegertic demands", "BreedingSeason.r", "", "", "", "")
+energeticDemands2 = c("", "PuppingCosts.r", "Howard et al. (2010)", "Winship et al. (2001)", "NA", "NA")
+energeticDemands3 = c("", "EfficiencyModel.r", "Howard et al. (2010)", "Winship et al. (2001)", "Weise and Harvey (2008)", "Williams et al. (2004)")
+
+
+energeticDemands4 = c("", "KleiberParameters.r", "Howard et al. (2010)", "Winship et al. (2001)", "Weise and Harvey (2008)", "Noren et al. (2011)")
+energeticDemands5 = c("", "ActivityFractions.r", "''", "''", "''", "''")
+energeticDemands6 = c("", "ActivityCosts.r", "''", "''", "''", "''")
+energeticDemands7 = c("",  "ProductionCosts.r", "''", "''", "", "")
+energeticDemands8 = c("",  "GrowthCosts.r", "''", "''", "", "")
+energeticDemands9 = c("", "PredatorEnergyDemand.r", "''", "''", "''", "''")
+
+x = as.data.frame(rbind(maxAge,skip, wtAge1,wtAge2, skip, matAtAge, skip, sexAtAge1, sexAtAge2, skip, inlandPresence1, inlandPresence2, skip, predatorAbundance1, skip, preySelectivity1, preySelectivity2, skip, energeticDemands1, energeticDemands2, energeticDemands3, energeticDemands4, energeticDemands5, energeticDemands6, energeticDemands7, energeticDemands8, energeticDemands9), row.names = FALSE)
+names(x) = c("Variable/Parameter", "Program script", "HS", "SSL", "CSL", "KW")
+
+write.table(x, "paperTable.txt", quote=FALSE, row.names=FALSE, col.names=FALSE, sep="\t")
+x = xtable(x, caption="Citations used to construct the population dynamics and feeding ecology of the predator populations.")
+print(x, comment=FALSE, include.rownames=FALSE)
+```
+\elandscape

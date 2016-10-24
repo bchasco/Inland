@@ -1,0 +1,27 @@
+Max age	Names.r	Howard et al. (2010)	Winship et al. (2001)	Bob de Long	25+
+					
+Weight at age	WeightAtAge.r		Pitcher and Calkins (1979)		Winship et al. (2001)		Winship et al. (2006)		Noren et al.  (2011)
+		Boulva and McLaren (1979)			
+					
+Maturity at age	MaturityAtAge.r		Pitcher and Calkins (1979)	Winship et al. (2002)	Winship et al. (2002)	NA
+					
+Sex and age ratios	SexAgeRatio.r		Zier and Gaydos (2014)	Winship et al. (2002)	Winship et al. (2002)	NA
+		Bigg (1969)		Bob deLong (pers. comm.)	
+					
+Predator presence	InlandPredatorPresence.r	NA	Jefferies et al. (2012)	Jefferies et al. (2012)	Hauser et al. (2007)
+			NAVFAC report	NAVFAC report	
+					
+Predator abundance	PredatorAbundance.r	Jefferies/Ward	Jefferies/Ward	Ward	Ford/Ward
+					
+Prey selectivity	PreyInDiet.r	Thomas et al. (2016)	Thomas et al. (2016)	Thomas et al. (2016)	Ford et al. (1998)
+			Scordino et al. (2013)	Scordino et al. (2013)	
+					
+Enegertic demands	BreedingSeason.r				
+	PuppingCosts.r	Howard et al. (2010)	Winship et al. (2001)	NA	NA
+	EfficiencyModel.r	Howard et al. (2010)	Winship et al. (2001)	Weise and Harvey (2008)	Williams et al. (2004)
+	KleiberParameters.r	Howard et al. (2010)	Winship et al. (2001)	Weise and Harvey (2008)	Noren et al. (2011)
+	ActivityFractions.r	''	''	''	''
+	ActivityCosts.r	''	''	''	''
+	ProductionCosts.r	''	''		
+	GrowthCosts.r	''	''		
+	PredatorEnergyDemand.r	''	''	''	''
